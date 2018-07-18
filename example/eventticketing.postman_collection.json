@@ -1,0 +1,275 @@
+{
+	"id": "1e9c9959-fdd7-7af2-370e-37b372c6e004",
+	"name": "eventticketing",
+	"description": "",
+	"order": [
+		"fb007a89-37fe-c4c0-d676-690b9cd0f47f",
+		"8fb91352-a0ab-8526-b83a-c9150f8aaffc",
+		"ce598916-e9f5-9c3f-098e-493b6767c0f4",
+		"74402072-ef05-a37a-46f4-307f0094f0d1",
+		"60550630-7a46-0e14-9d23-0b56fc04b6e3",
+		"98e38b06-1ede-97ef-9a75-505cc0c8e5a0"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1531671644953,
+	"owner": "2426053",
+	"public": false,
+	"requests": [
+		{
+			"id": "60550630-7a46-0e14-9d23-0b56fc04b6e3",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8000/api/v1/event/get_info/6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1531847309906,
+			"name": "Get Event Info",
+			"description": "",
+			"collectionId": "1e9c9959-fdd7-7af2-370e-37b372c6e004",
+			"responses": []
+		},
+		{
+			"id": "74402072-ef05-a37a-46f4-307f0094f0d1",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8000/api/v1/transaction/purchase",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1531936290801,
+			"name": "Purchase Transaction",
+			"description": "",
+			"collectionId": "1e9c9959-fdd7-7af2-370e-37b372c6e004",
+			"responses": [],
+			"rawModeData": "{\n\t\"customer_id\": 1,\n\t\"payment_method\": \"Mandiri e-banking\",\n\t\"ticket_transaction\": [\n\t\t{\n\t\t\t\"ticket_id\": 21,\n\t\t\t\"quatity\": 2\n\t\t},\n\t\t{\n\t\t\t\"ticket_id\": 7,\n\t\t\t\"quatity\": 3\n\t\t}\n\t]\n}"
+		},
+		{
+			"id": "8fb91352-a0ab-8526-b83a-c9150f8aaffc",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8000/api/v1/event/ticket/create",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "event_id",
+					"value": "6",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "Podium belakang",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ticket_type",
+					"value": "Free",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "is_active",
+					"value": "True",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "quota",
+					"value": "100",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1531847273025,
+			"name": "Create Ticket Event",
+			"description": "",
+			"collectionId": "1e9c9959-fdd7-7af2-370e-37b372c6e004",
+			"responses": []
+		},
+		{
+			"id": "98e38b06-1ede-97ef-9a75-505cc0c8e5a0",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8000/api/v1/transaction/get_info/22/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1531936287843,
+			"name": "Get Transaction Info",
+			"description": "",
+			"collectionId": "1e9c9959-fdd7-7af2-370e-37b372c6e004",
+			"responses": []
+		},
+		{
+			"id": "ce598916-e9f5-9c3f-098e-493b6767c0f4",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8000/api/v1/location/create",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "location_name",
+					"value": "Kasablanka Hall",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "address",
+					"value": "Jl. Casablanca Kav.88, Jakarta Pusat",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "longitude",
+					"value": "-6.2241257",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "latitude",
+					"value": "106.8410168",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "is_active",
+					"value": "True",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1531847279952,
+			"name": "Create Location",
+			"description": "",
+			"collectionId": "1e9c9959-fdd7-7af2-370e-37b372c6e004",
+			"responses": []
+		},
+		{
+			"id": "fb007a89-37fe-c4c0-d676-690b9cd0f47f",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8000/api/v1/event/create",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "location_id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "start_date",
+					"value": "2018-07-17 08:00:00",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "end_date",
+					"value": "2018-08-17 20:00:00",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "event_name",
+					"value": "Konser 1000 Bintang",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "event_organizer",
+					"value": "Promotor Indonesia",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1531847276451,
+			"name": "Create Event",
+			"description": "",
+			"collectionId": "1e9c9959-fdd7-7af2-370e-37b372c6e004",
+			"responses": []
+		}
+	]
+}
