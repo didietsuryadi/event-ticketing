@@ -112,9 +112,7 @@ class CreateTransactionView(APIView):
                     transaction_result.save()
                     detail_ticket.quota -= ticket_transaction['quatity']
                     detail_ticket.save()
-                serializer = TransactionSerializer(data=model_to_dict(transaction_result))
-                serializer.is_valid(raise_exception=True)
-                return Response(status=HTTP_200_OK, data=serializer.data)
+            return Response(status=HTTP_200_OK, data=model_to_dict(transaction_result))
         except Exception as e:
             return Response(status=HTTP_400_BAD_REQUEST,
                         data={'messages': e})
